@@ -1,0 +1,514 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+::selection {
+  color:  #333736;
+  background: #e1dcbe;
+}
+
+body, html{
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-snap-type: y mandatory; /* Smooth snapping */
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  
+
+}
+
+.section{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  scroll-snap-align: start;
+
+}
+
+/*Fadin animation*/
+@keyframes fadeIn {
+from{
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
+/*Typewriter animation*/
+@keyframes typing {
+from{
+    width: 0%;
+}
+to{
+    width: 100%;
+}
+}
+
+/*Cursor animation*/
+
+/*custom font*/
+@font-face {
+font-family: 'BNBoxer';
+src: url(assets/fonts/BNBoxer.otf);
+}
+@font-face {
+font-family: 'Copal';
+src: url(assets/fonts/Copal\ Std\ Solid.otf)
+}
+
+
+
+
+
+/* Home Scetion */
+
+.home{
+position: relative;
+background-color: #e1dcbe;
+}
+
+.texture{
+position: relative;
+display: flex;
+width: 100vw;
+height: 100vh;
+}
+
+
+
+.introduction {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+}
+
+.introduction h1 {
+  font-family: 'Cascadia Code', monospace;
+  font-size: 350%;
+  font-weight: bold;
+  color: #333736;
+  opacity: 0;
+  animation: fadeIn 1s ease-in 1s forwards;
+  margin-bottom: 0px;
+}
+
+.introduction h2{
+  font-family: 'Cascadia Code', monospace;
+  font-size: 350%;
+  font-weight: bold;
+  color: #333736;
+  opacity: 0;
+  animation: fadeIn 1s ease-in 1s forwards;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.introduction span{
+  font-family: 'Bowlby One SC','Cascadia Code', monospace;
+  font-size: 5rem;
+  color: #436f4b;
+}
+
+.typewriter{
+  position: relative;
+  padding-bottom: 1%;
+  font-family: 'Cascadia Code', monospace;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #333736;
+  opacity: 0;
+  display: inline-block;
+  overflow: hidden; /* Hides the overflowing text */
+  white-space: nowrap; /* Prevents text from wrapping */
+  
+  padding-right: 5px;
+  overflow: hidden;
+  animation: typing 5s steps(30) 1s forwards, blink 0.75s step-end infinite, fadeIn 1s ease-in 2s forwards;
+  
+}
+
+.line {
+  position: absolute;
+  width: 90%;
+  border: 1px solid #333736;
+  background-color: transparent;
+  opacity: 0;
+  animation: fadeIn 1s ease-in 1s forwards;
+}
+
+.email{
+position: absolute;
+top: 3%;
+right: 13%;
+font-family: 'Cascadia Code', monospace;
+font-size: 0.9rem;
+font-weight: bold;
+text-decoration: none;
+color: #333736;
+opacity: 0;
+animation: fadeIn 1s ease-in 1s forwards;
+}
+
+
+.contianer{
+position: absolute;
+top: 3px;
+right: 4px;
+margin-left: 10px;
+}
+
+.Con{
+padding-left: 10px;
+opacity: 0;
+animation: fadeIn 1s ease-in 1s forwards;
+}
+
+
+
+.buttons{
+position: absolute;
+top: 105%;
+border:#436f4b;
+border-style: dashed;
+box-shadow: 3px 3px 3px #436f4b;
+opacity: 0;
+animation: fadeIn 1s ease-in 1s forwards;
+
+}
+
+.btn {
+display: inline-block;
+font-family: 'Cascadia Code', monospace;
+color: #333736;
+padding: 10px 20px;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+background-color: #55555552;
+}
+
+.programes{
+  display: inline-block;
+  position: absolute;
+  left: 5%;
+  bottom: 3%;
+  height:fit-content;
+  opacity: 0;
+  animation: fadeIn 1s ease-in 1s forwards;
+}
+
+.lan{
+height: 30px;
+padding-right: 10px;
+}
+
+
+/* Bio */ 
+
+.bio {
+  position: relative;
+  background-color: #436F4B;
+  background-image: url(assets/images/cartographer.png);
+}
+
+.buttons1{
+position: absolute;
+top: 1%;
+left: 50%;
+transform: translateX(-50%);
+border:#e1dcbe;
+border-style: dashed;
+box-shadow: 3px 3px 3px #e1dcbe;
+}
+
+.btn1 {
+  display: inline-block;
+  font-family: 'Cascadia Code', monospace;
+  color: #e1dcbe;
+  padding: 4px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn1:hover {
+background-color: #e1dcbe53;
+}
+
+.corner{
+position: absolute;
+top: 0;
+right: 0;
+height: 200px;
+}
+
+.body{
+  position: absolute;
+  top: 15%;
+  align-items: center;
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-bottom: 100px;
+  
+}
+
+.body p{
+  font-family: 'Cascadia Code', monospace;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #e1dcbe;
+  text-align: center;
+}
+
+.me{
+  position: absolute;
+  left: 47%;
+  height: 200px;
+  padding-bottom: 20px;
+}
+
+.bottom_text{
+  position: absolute;
+  text-align: center;
+  margin-left: 32%;
+  top: 120%;
+  
+    
+}
+
+.bottom_text h1{
+  font-family: 'Bowlby One SC','Cascadia Code', monospace;
+  font-size: 3rem;
+  color: #e1dcbe;
+  
+}
+
+.bottom_text h2{
+  font-family: 'Cascadia Code', monospace;
+  font-weight: 100;
+  font-size: 1rem;
+  color: #e1dcbe;
+}
+
+
+/* Work */
+
+.work {
+position: relative;
+background-color: #333736;
+background-image: url(/assets/images/classy.png);
+}
+
+.projects {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+position: absolute;
+top: 10%;
+left: 5%;
+width: 90%;
+height: 70%;
+gap: 10px;
+}
+
+.projects > div {
+background-color: rgba(241, 241, 241, 0);
+margin: 10px;
+font-size: 30px;
+border: 7px double black;
+border-radius: 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+box-shadow:10px 10px 8px black;
+
+}
+
+.item1 {
+grid-row: 1 / span 2;
+}
+
+.item2 {
+grid-column: 2 / span 2;
+}
+
+.item3 {
+grid-column: 2;
+}
+
+.item4 {
+grid-column: 3;
+}
+
+.item5 {
+grid-column: 4;
+grid-row: 1 / span 2;
+}
+
+/* Ensure images fit properly */
+.art {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 15px;
+}
+
+.rectangle{
+position: absolute;
+top: 93%;
+bottom: 0;
+width: 100%;
+height: 8%;
+background-color: #A1A1A1;
+border-top: black solid 5px;
+
+}
+
+.me_sitting{
+position: absolute;
+right: 4%;
+bottom: 0;
+width: 20%;
+height: 20%;
+
+}
+
+/* SayHi */
+
+.sayhi {
+  position: relative;
+  background-color: #482B1B;
+}
+
+.con{
+position: absolute;
+bottom: 1%;
+right: 55%; 
+}
+
+
+.con1{
+position: absolute;
+bottom: 1%;
+right: 48%;    
+}
+
+.con2{
+position: absolute;
+bottom: 1%;
+right: 40%;
+transition: width 2s, height 2s;  
+}
+
+.grid{
+display: grid;
+grid-template-columns: repeat(6,1fr);
+position: absolute;
+top: 10%;
+left:5%;
+width: 90%;
+height: 80%;
+}
+
+.grid>div{
+position: relative;
+border:#e1dcbe solid 2px ;
+border-radius: 9px;
+margin: 4px;
+overflow: hidden; /* Ensures content doesn't overflow */ 
+}
+
+.box1{
+grid-area: 1 / 1 / span 2;
+}
+
+.box2{
+
+grid-area: 1 / 2 / span 1 / span 2;
+}
+
+.box5{
+grid-area: 1 / 6 / span 2;
+}
+
+
+.box7 {
+grid-area: 2 / 3 / span 1 / span 2;
+display: flex;
+justify-content: center; /* Center horizontally */
+align-items: center; /* Center vertically */
+text-align: center; /* Ensure text alignment */
+}
+
+
+
+.box10{
+grid-area: 3 / 2 / span 1 / span 3;
+}
+
+.text{
+position: absolute;
+font-family: 'Bowlby One SC','Cascadia Code', monospace;
+font-size: 5rem; 
+color: #e1dcbe;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+.projects {
+  grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns */
+  height: auto; /* Allow height to adjust */
+}
+}
+
+@media (max-width: 768px) {
+.projects {
+  grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
+  gap: 8px; /* Smaller spacing */
+}
+
+.projects > div {
+  font-size: 24px; /* Smaller font size */
+  padding: 15px;
+}
+
+.grid {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust for small screens */
+}
+}
+
+@media (max-width: 480px) {
+
+  body{
+    font-size: 16px;
+  }
+.projects {
+  grid-template-columns: repeat(1,1fr); /* Single column layout */
+  gap: 5px;
+}
+
+.projects > div {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.me_sitting{
+  display: none;
+}
+}
